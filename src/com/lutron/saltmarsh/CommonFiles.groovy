@@ -1,5 +1,6 @@
 package com.lutron.saltmarsh
 
- def getArtifactFileName(String branchName, String zipPackageType) {
+class CommonFiles {
+   def ZipFileName(String branchName, String zipPackageType) {
       return branchName.replace("/","-")+"-$zipPackageType"+".zip"
- }
+   } 
