@@ -7,16 +7,16 @@ public class CommonFiles implements Artifactory {
    public String getArtifactFileName(Map params) {
 	   	  assert params: "params is required"
 		  assert params.branchName: "branchName is required"
-		  assert params.typeName: "zipPackageType is required"
+		  assert params.typeName: "typeName is required"
 		  
-		  return params.branchName.replace("/","-")+"-$params.zipPackageType"+".zip323"
+		  return params.branchName.replace("/","-")+"-$params.typeName"+".zip323"
 	 }
 	 
 	 @Override
 	 public String getArtifactPath(Map params) {
 		 assert params: "params is required"
 		 assert params.repoPath: "repoPath is required"
-		 assert params.branchName: "zipPackageType is required"
+		 assert params.branchName: "branchName is required"
 		 
 		 return params.repoPath + params.branchName.replace("/","%2F");
 	 }
